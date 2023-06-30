@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -16,11 +16,11 @@ nav {
   align-items: center;
   padding: 0px 16px;
   height: 70px;
-  background-color: #CAFDFF;
+  background-color: #cafdff;
 }
 
 header {
-  background-color: #EADCFF;
+  background-color: #eadcff;
   min-height: calc(100vh - 70px);
   padding: 20px;
   display: flex;
@@ -34,7 +34,7 @@ img {
 }
 
 button {
-  background-color: #05C7CF;
+  background-color: #05c7cf;
   color: white;
   padding: 8px 16px;
   font-size: 24px;
@@ -42,7 +42,8 @@ button {
   cursor: pointer;
 }
 
-.glitch-text, p {
+.glitch-text,
+p {
   line-height: 1.5;
 }
 
@@ -114,7 +115,7 @@ h2 {
 }
 
 #about {
-  background-color: #F8FFDC;
+  background-color: #f8ffdc;
 }
 
 .section__description {
@@ -144,12 +145,12 @@ h2 {
 About Glitched
 */
 
-.glitch-container{
+.glitch-container {
   position: relative;
   display: inline-block;
 }
 
-.glitch-text{
+.glitch-text {
   position: relative;
   display: flex;
   font-size: 20px;
@@ -162,8 +163,8 @@ About Glitched
   left: 0;
   width: 100%;
   height: 100%;
-  clip: rect(0, 100%, 100%, 0);
-  animation: glitch 2s infinite;
+  clip: rect(auto, auto, auto, auto);
+  animation: glitch 2s infinite alternate-reverse;
 }
 
 /*
@@ -198,12 +199,10 @@ Glitch animation
   }
 }
 
-
-
 /*
 Glitch interactions
 */
-.glitch-container:hover .glitch-text::after{
+.glitch-container:hover .glitch-text::after {
   content: attr(data-hover-text);
 }
 
@@ -214,7 +213,44 @@ Glitch interactions
 */
 
 #discord {
-  background-color: #CEFEFF;
+  background-color: #cefeff;
+  background: linear-gradient(to bottom, #cefeff, #cefeff 50%, #a3fafc 50%, #a3fafc);
+  background-size: 100% 4px;
+  animation: gradientMove 200ms ease infinite;
+}
+
+/*
+Discord Chromatic Aberations
+*/
+
+.chrome__Abb {
+  font-size: 24px;
+  text-shadow: 3px 2px 2px rgba(251, 12, 12, 1),
+    0px -1px 3px rgba(12, 79, 251, 0.5), -3px 0px 2px rgba(52, 251, 12, 1);
+    animation: chromaticMove 4500ms ease infinite, pulse ease 200ms infinite;
+}
+
+/*
+Discord chromatic Aberations animations
+*/
+
+@keyframes gradientMove { 
+  0%{background-size: 100% 4px}
+  50%{background-size: 100% 2px}
+  100%{background-size: 100% 4px}
+}
+
+@keyframes pulse { 
+  0%{ opacity:.9;transform: skewX(.5deg);}
+  25%{ opacity:1;}
+  50%{opacity:.9;}
+  75%{ opacity:1; transform:skewX(.5deg);}
+  100%{opacity:.9;}
+}
+@keyframes chromaticMove { 
+  0%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),0px 0px -2px rgba(52, 251, 12, 1);}
+  50%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),-3px 2px 3px rgba(52, 251, 12, 1);}
+  100%{text-shadow: 3px 2px 2px rgba(251, 12, 12,1), 0px -1px 3px rgba(12, 79, 251,.5),2px -1px 2px rgba(52, 251, 12, 1);}
 }
 
 /* 
@@ -224,7 +260,7 @@ Glitch interactions
 */
 
 #contact {
-  background-color: #DCE9FF;
+  background-color: #dce9ff;
 }
 
 form {
@@ -234,7 +270,8 @@ form {
   flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
   font-size: 20px;
   margin-bottom: 24px;
   padding: 6px 12px;
@@ -251,7 +288,7 @@ input {
 */
 
 footer {
-  background-color: #AAF5FF;
+  background-color: #aaf5ff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,8 +311,9 @@ footer {
   .row {
     flex-direction: column;
   }
-  
-  .home__description, .home__img--wrapper {
+
+  .home__description,
+  .home__img--wrapper {
     width: 100%;
   }
 
